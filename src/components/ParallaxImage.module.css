@@ -1,0 +1,13 @@
+.frame {
+  position: relative;
+  overflow: hidden;
+}
+.image {
+  position: absolute;
+  left: 0;
+  top: calc(var(--travel) / -2);
+  width: 100%;
+  height: calc(100% + var(--travel));
+  object-fit: cover;
+  will-change: transform;
+}

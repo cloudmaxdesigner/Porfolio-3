@@ -1,0 +1,74 @@
+.heading {
+  display: flex;
+  flex-direction: column;
+}
+/* The Framer copy starts with a run of spaces to indent the first line under the label. */
+.indent {
+  text-indent: 22%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 64px 16px;
+}
+.card {
+  grid-column: 1 / span 3;
+}
+.text {
+  grid-column: 5 / span 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 64px;
+}
+.quote {
+  color: var(--color-gray-60);
+}
+.lead {
+  text-indent: 15%;
+}
+.more {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.paragraphs {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px 16px;
+}
+
+@media (max-width: 1199px) {
+  .card {
+    grid-column: 1 / span 4;
+  }
+  .text {
+    grid-column: 5 / span 5;
+  }
+}
+
+@media (max-width: 767px) {
+  .heading {
+    gap: 24px;
+  }
+  .indent {
+    text-indent: 0;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .text {
+    gap: 24px;
+  }
+  .more {
+    gap: 32px;
+  }
+  .paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

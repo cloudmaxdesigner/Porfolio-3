@@ -1,0 +1,36 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 48px 16px;
+}
+.highlights {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+.accordion {
+  grid-column: 4 / span 6;
+}
+
+@media (max-width: 1199px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .highlights {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .highlights {
+    flex-direction: column;
+    gap: 64px;
+  }
+  /* The card row bleeds to the screen edges and re-applies the gutter itself. */
+  .accordion {
+    margin: 0 calc(-1 * var(--gutter));
+  }
+}

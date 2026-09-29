@@ -1,0 +1,171 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  width: 100%;
+}
+
+.testimonial {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 48px 16px;
+}
+
+.people {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.pictures {
+  position: relative;
+  height: 254px;
+}
+.picture {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.7s var(--ease-out);
+}
+.picture[data-active="true"] {
+  opacity: 1;
+}
+
+.authors {
+  display: grid;
+}
+.author {
+  grid-area: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  opacity: 0;
+  transition: opacity 0.5s var(--ease-out);
+}
+.author[data-active="true"] {
+  opacity: 1;
+}
+.role {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.content {
+  grid-column: 4 / span 6;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+.quoteContain {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  min-height: 232px;
+  max-width: 720px;
+}
+.quoteIcon {
+  color: var(--color-gray-60);
+}
+.quotes {
+  display: grid;
+}
+.quote {
+  grid-area: 1 / 1;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+}
+.quote[data-active="true"] {
+  opacity: 1;
+  transform: none;
+}
+.arrows {
+  display: flex;
+  gap: 12px;
+}
+
+.metrics {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.metric {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 16px;
+  text-align: left;
+}
+.track {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--color-border);
+  overflow: hidden;
+}
+.progress {
+  position: absolute;
+  inset: 0;
+  background: var(--color-white);
+  transform-origin: left center;
+  animation-name: progress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.progressStatic {
+  position: absolute;
+  inset: 0;
+  background: var(--color-white);
+}
+.metricText {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  opacity: 0.5;
+  transition: opacity 0.4s;
+}
+.metric[data-active="true"] .metricText,
+.metric:hover .metricText {
+  opacity: 1;
+}
+
+@keyframes progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (max-width: 767px) {
+  .slider {
+    gap: 32px;
+  }
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+  }
+  .people {
+    flex-direction: row;
+    gap: 12px;
+  }
+  .pictures {
+    flex: none;
+    width: 50px;
+    height: 50px;
+  }
+  .quoteContain {
+    min-height: 200px;
+  }
+  .metrics {
+    flex-direction: column;
+  }
+}

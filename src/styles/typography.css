@@ -1,0 +1,22 @@
+/* Text styles — used through the <Text> component (src/components/Text.tsx). */
+.t {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+.t-b-big { font-size: var(--text-b-big); line-height: 1.3; letter-spacing: -0.02em; }
+.t-b-xlarge { font-size: var(--text-b-xlarge); line-height: 1.3; letter-spacing: -0.01em; }
+.t-b-large { font-size: var(--text-b-large); line-height: 1.4; letter-spacing: -0.01em; }
+.t-b-medium { font-size: var(--text-b-medium); line-height: 1.5; color: var(--color-gray-40); }
+.t-b-small { font-size: var(--text-b-small); line-height: 1.5; color: var(--color-gray-40); }
+.t-h1-medium { font-size: var(--text-h1-medium); line-height: 1.05; letter-spacing: -0.04em; }
+.t-h2-large { font-size: var(--text-h2-large); line-height: 1; letter-spacing: -0.045em; }
+.t-h2-medium { font-size: var(--text-h2-medium); line-height: 1.05; letter-spacing: -0.04em; }
+.t-h3 { font-size: var(--text-h3); line-height: 1.1; letter-spacing: -0.03em; }
+.t-label-big { font-size: var(--text-label-big); line-height: 1.2; color: var(--color-gray-40); }
+.t-label-small { font-size: var(--text-label-small); line-height: 1.2; color: var(--color-gray-40); }
+.t-label-small-lh { font-size: var(--text-label-small); line-height: 1.6; color: var(--color-gray-40); }
+
+.t-white { color: var(--color-white); }
+.t-gray-40 { color: var(--color-gray-40); }
+.t-gray-50 { color: var(--color-gray-50); }

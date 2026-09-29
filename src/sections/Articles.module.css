@@ -1,0 +1,36 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 64px;
+}
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.all {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+.count {
+  line-height: 1;
+}
+
+@media (max-width: 1199px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .body {
+    gap: 48px;
+  }
+  .grid {
+    display: flex;
+    flex-direction: column;
+  }
+}

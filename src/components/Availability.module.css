@@ -1,0 +1,30 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.slots {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.slot {
+  width: 2px;
+  height: 12px;
+  background: var(--color-gray-60);
+}
+.slot[data-open="true"] {
+  background: var(--color-white);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+.text {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  white-space: nowrap;
+}
+@keyframes pulse {
+  50% {
+    opacity: 0.45;
+  }
+}

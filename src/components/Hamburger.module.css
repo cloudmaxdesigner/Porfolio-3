@@ -1,0 +1,41 @@
+.button {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-black);
+  border: 1px solid var(--color-border);
+}
+.bar {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 18px;
+  height: 2px;
+  background: var(--color-white);
+  transition: transform 0.45s var(--ease-out), width 0.45s var(--ease-out), opacity 0.3s;
+}
+.bar:nth-child(1) {
+  transform: translate(-50%, calc(-50% - 5px));
+}
+.bar:nth-child(2) {
+  width: 12px;
+  transform: translate(calc(-50% - 3px), -50%);
+}
+.bar:nth-child(3) {
+  transform: translate(-50%, calc(-50% + 5px));
+}
+
+.button[data-open="true"] .bar:nth-child(1) {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.button[data-open="true"] .bar:nth-child(2) {
+  width: 18px;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.button[data-open="true"] .bar:nth-child(3) {
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(45deg);
+}

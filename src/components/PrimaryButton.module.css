@@ -1,0 +1,37 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  width: fit-content;
+  padding-right: 16px;
+  border: 1px solid var(--color-border);
+  background: var(--color-black);
+  color: var(--color-white);
+  transition: background-color 0.35s var(--ease-out), color 0.35s var(--ease-out), border-color 0.35s;
+}
+
+.button[data-light="true"] {
+  background: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-black);
+}
+
+.button[data-full="true"] {
+  width: 100%;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  padding: 8px 0 8px 16px;
+}
+.text :global(.t) {
+  color: inherit;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+}

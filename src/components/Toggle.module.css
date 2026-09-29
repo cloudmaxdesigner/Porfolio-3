@@ -1,0 +1,36 @@
+.toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 226px;
+  height: 34px;
+  background: var(--color-black);
+  border: 1px solid var(--color-border);
+}
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: var(--color-white);
+  transition: transform 0.45s var(--ease-out);
+}
+.toggle[data-value="1"] .bg {
+  transform: translateX(100%);
+}
+.option {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.option :global(.t) {
+  color: var(--color-gray-40);
+  transition: color 0.3s;
+}
+.option[data-active="true"] :global(.t) {
+  color: var(--color-black);
+}

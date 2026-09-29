@@ -1,0 +1,46 @@
+.section {
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-black);
+}
+.inside {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 48px;
+}
+.viewport {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+.track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  animation: ticker 40s linear infinite;
+}
+.viewport:hover .track {
+  animation-play-state: paused;
+}
+.item {
+  padding: 24px;
+}
+.item img {
+  height: 30px;
+  width: auto;
+  opacity: 0.7;
+}
+
+@keyframes ticker {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 767px) {
+  .inside {
+    padding: 0 24px;
+  }
+}

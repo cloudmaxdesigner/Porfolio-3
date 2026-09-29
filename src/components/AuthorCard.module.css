@@ -1,0 +1,32 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+}
+.root[data-size="large"] {
+  gap: 18px;
+}
+.avatar {
+  width: 38px;
+  height: 38px;
+  object-fit: cover;
+  border: 1px solid var(--color-border);
+}
+.root[data-size="large"] .avatar {
+  width: 48px;
+  height: 64px;
+}
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.root[data-size="large"] .meta {
+  gap: 4px;
+}
+.role {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}

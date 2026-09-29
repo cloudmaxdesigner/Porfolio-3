@@ -1,0 +1,21 @@
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.number {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-h3);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--color-white);
+  user-select: none;
+}

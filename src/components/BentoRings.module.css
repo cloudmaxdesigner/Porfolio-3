@@ -1,0 +1,30 @@
+.outer,
+.middle,
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1000px;
+  border: 2px solid var(--color-border);
+  transition: border-color 0.35s;
+}
+.outer {
+  width: 192px;
+  height: 192px;
+}
+.middle {
+  width: 75%;
+  height: 75%;
+}
+.inner {
+  width: 57%;
+  height: 57%;
+  color: var(--color-white);
+}
+.inner[data-lit="true"],
+.middle[data-lit="true"] {
+  border-color: var(--color-gray-40);
+}
+.outer[data-lit="true"] {
+  border-color: var(--color-white);
+}

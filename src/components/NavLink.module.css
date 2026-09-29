@@ -1,0 +1,14 @@
+.link {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 6px;
+  width: fit-content;
+  color: var(--color-white);
+}
+.count {
+  font-family: var(--font-display);
+  font-size: 12px;
+  line-height: 1;
+  color: var(--color-gray-40);
+  top: 0.2em;
+}

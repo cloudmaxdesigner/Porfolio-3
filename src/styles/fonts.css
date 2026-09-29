@@ -1,0 +1,8 @@
+/* Inter Display 600 (the only weight the text styles use), self-hosted from the `inter-ui` package (no third-party font requests). */
+@font-face {
+  font-family: "Inter Display";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("inter-ui/display-latin/InterDisplay-SemiBold-subset.woff2") format("woff2");
+}

@@ -1,0 +1,84 @@
+.accordion {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  position: relative;
+  flex: 0 0 72px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  background: var(--color-black);
+  border: 1px solid var(--color-border);
+  transition: flex-basis 0.7s var(--ease-out), flex-grow 0.7s var(--ease-out), border-color 0.4s;
+}
+.card[data-open="true"] {
+  flex: 1 1 0;
+  border-color: var(--color-gray-50);
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  padding: 24px 0 0;
+  text-align: left;
+  cursor: pointer;
+  transition: padding 0.5s var(--ease-out);
+}
+.card[data-open="true"] .number {
+  justify-content: flex-start;
+  padding: 24px 24px 0;
+  cursor: default;
+}
+.number:disabled {
+  cursor: default;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 300px;
+  padding: 24px 24px 32px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.card[data-open="true"] .content {
+  opacity: 1;
+  transition: opacity 0.5s 0.25s;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.text h3 {
+  margin: 0;
+}
+
+/* Phone: horizontal scroll-snap row, every card open. */
+.accordion[data-mobile="true"] {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 var(--gutter);
+  scrollbar-width: none;
+}
+.accordion[data-mobile="true"]::-webkit-scrollbar {
+  display: none;
+}
+.accordion[data-mobile="true"] .card {
+  flex: 0 0 min(320px, 82vw);
+  height: 440px;
+  scroll-snap-align: center;
+  border-color: var(--color-border);
+}
+.accordion[data-mobile="true"] .content {
+  min-width: 0;
+}

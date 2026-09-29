@@ -1,0 +1,42 @@
+.root {
+  display: flex;
+  gap: 16px;
+  width: fit-content;
+}
+.avatars {
+  display: flex;
+  align-items: center;
+  padding-left: 9px;
+}
+.avatar,
+.you {
+  width: 32px;
+  height: 32px;
+  margin-left: -9px;
+  border-radius: 1000px;
+  border: 1px solid var(--color-black);
+  object-fit: cover;
+}
+.you {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-black-80);
+  font-size: 9px;
+  color: var(--color-white);
+}
+.meta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.score {
+  display: flex;
+  align-items: center;
+}

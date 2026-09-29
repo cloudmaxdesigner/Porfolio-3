@@ -1,0 +1,60 @@
+/*
+ * Design tokens exported from the Framer project.
+ * Colour styles and text styles are defined once here and referenced everywhere else.
+ */
+:root {
+  /* Colour styles */
+  --color-black: rgb(0, 0, 0);
+  --color-black-80: rgb(28, 28, 28);
+  --color-black-90: rgb(5, 5, 5);
+  --color-border: rgb(54, 54, 54);
+  --color-gray-30: rgb(222, 222, 222);
+  --color-gray-40: rgb(184, 184, 184);
+  --color-gray-50: rgb(130, 130, 130);
+  --color-gray-60: rgb(84, 84, 84);
+  --color-white: rgb(255, 255, 255);
+
+  /* Typography */
+  --font-display: "Inter Display", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --text-b-big: 1.5rem;
+  --text-b-xlarge: 1.25rem;
+  --text-b-large: 1rem;
+  --text-b-medium: 0.875rem;
+  --text-b-small: 0.725rem;
+  --text-h1-medium: 4rem;
+  --text-h2-large: 4.8rem;
+  --text-h2-medium: 3.2rem;
+  --text-h3: 2rem;
+  --text-label-big: 14px;
+  --text-label-small: 12px;
+
+  /* Layout */
+  --container-max: 1920px;
+  --gutter: 72px;
+  --section-pad: 128px;
+  --section-gap: 128px;
+  --grid-gap: 16px;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (max-width: 1199px) {
+  :root {
+    --text-h1-medium: 3.2rem;
+    --text-h2-large: 4rem;
+    --text-h2-medium: 3rem;
+    --gutter: 48px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --text-h1-medium: 2.5rem;
+    --text-h2-large: 3rem;
+    --text-h2-medium: 2.4rem;
+    --gutter: 24px;
+    --section-pad: 48px;
+    --section-gap: 64px;
+  }
+}

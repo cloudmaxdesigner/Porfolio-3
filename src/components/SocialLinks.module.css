@@ -1,0 +1,19 @@
+.list {
+  display: flex;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  color: var(--color-gray-40);
+  transition: color 0.25s;
+}
+.link:hover {
+  color: var(--color-white);
+}

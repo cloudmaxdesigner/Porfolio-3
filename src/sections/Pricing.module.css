@@ -1,0 +1,78 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-black);
+  border: 1px solid var(--color-border);
+}
+.custom {
+  justify-content: center;
+  padding: 32px 24px;
+}
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.priceButton {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 64px;
+}
+.startsAt {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.bookCall {
+  flex: 1;
+  justify-content: space-between;
+  gap: 48px;
+}
+.member {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+}
+.slots {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+@media (max-width: 1199px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .right {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 767px) {
+  .grid,
+  .right {
+    display: flex;
+    flex-direction: column;
+  }
+  .bookCall {
+    justify-content: center;
+  }
+}

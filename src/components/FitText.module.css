@@ -1,0 +1,24 @@
+.container {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+.measure,
+.text {
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 0.82;
+  white-space: nowrap;
+}
+.measure {
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.text {
+  display: block;
+  /* Negative tracking leaves trailing space after the last glyph; pull it back. */
+  margin-right: -0.06em;
+}

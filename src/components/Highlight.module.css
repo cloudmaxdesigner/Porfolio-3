@@ -1,0 +1,14 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 340px;
+}
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}

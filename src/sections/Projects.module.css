@@ -1,0 +1,27 @@
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 64px;
+}
+/* "More Projects": auto-fill columns with a 500px minimum → 2 up on desktop, 1 up below. */
+.grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(500px, 100%), 1fr));
+  gap: 16px;
+}
+.all {
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+.count {
+  line-height: 1;
+}
+
+@media (max-width: 767px) {
+  .body {
+    gap: 32px;
+  }
+}
